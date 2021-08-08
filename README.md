@@ -14,8 +14,9 @@
 
 
 #### 目录
-|-task3.2|-eraser.png   
-         |-painter.png  
+|-task3.2  
+         |-eraser.png      
+         |-painter.png    
          |-plus.png  
          |-minus.png  
          |-task3.2.py  
