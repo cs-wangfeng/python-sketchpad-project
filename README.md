@@ -1,37 +1,67 @@
 # python画板程序
 
-#### 介绍
-使用wxpython的控件以及pygame进行制作的画板程序
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### 简介
+使用wxpython的控件以及pygame进行制作的画板程序，其中wxpython函数库产生控件窗口用于选择画笔颜色，而pygame函数库产生画板界面，在界面上也设置了按钮，诸如：选择画笔、选择橡皮、选择画笔的粗细、选择画笔的颜色，在画板界面上也显示了当前画笔的颜色以及粗细。  
+  
+以下为画板的显示界面：  
+![画板显示界面](https://images.gitee.com/uploads/images/2021/0808/164206_b6f14cc7_9490403.png "屏幕截图 2021-08-08 164148.png")
+  
+以下为画笔颜色控件GUI界面的图片：  
+![画笔颜色GUI控件](https://images.gitee.com/uploads/images/2021/0808/164413_0fca8328_9490403.png "屏幕截图 2021-08-08 164359.png")  
+  
+以下为画板绘制的效果图：  
+![画板绘制效果图](https://images.gitee.com/uploads/images/2021/0808/164717_15308bb3_9490403.png "屏幕截图 2021-08-08 164623.png")  
 
 
-#### 特技
+#### 目录
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
+
+#### 约束
+
+1.  该文件夹中的.py文件需要在python编译器环境下运行（VS可以使用.sln文件运行）  
+2.  该文件需要在电脑中安装pygame、wxpython库（方法：在cmd中输入‘pip install pygame’、‘pip install wxpython’）  
+
+
+#### 编译构建
+
+下载文件夹之后，在有python编译器环境前提下打开task3.2.py文件即可运行  
+注意：如果在网页上下载，应将以上文件全部下载，并且放入名为task3.2的文件夹（自行创建即可），即可运行，原因是代码中需要该文件夹的地址（如图）  
+![png文件路径](https://images.gitee.com/uploads/images/2021/0808/163551_4d20697c_9490403.png "屏幕截图 2021-08-08 163529.png")
+
+#### 说明
+
+- 组件说明  
+ 
+1.图片文件   
+  
+eraser.png -> 橡皮图片  
+painter.png -> 画笔图片  
+plus.png -> 加号图片  
+minus.png -> 减号图片  
+  
+2.Python File (.py)  
+  
+task3.2.py
+  
+3.Python Project (.pyproj)  
+
+task3.2.pyproj  
+  
+4.Visual Studio Solution (.sln)  
+
+task3.2.sln  
+  
+  
+- 使用说明  
+  
+下载文件夹之后，在有python编译器环境前提下打开task3.2.py文件即可运行  
+注意：如果在网页上下载，应将以上文件全部下载，并且放入名为task3.2的文件夹（自行创建即可），即可运行，原因是代码中需要该文件夹的地址  
+
+
+#### 整体的架构思想
+
+1.  使用pygame建立画板界面，定义画笔的颜色以及粗细，定义画板的大小，定义换班左侧控件区域的大小，定义一系列的按钮区域
+2.  使用pygame函数监测鼠标位置以及鼠标的单击、移动的动作，从而在绘制过程中确保画笔在画板上留下痕迹。
+3.  使用wxpython函数库建立新窗口，该GUI窗口包含对于画笔颜色的选择，选择某种颜色即可改变画在屏幕上的画笔痕迹的颜色
+4.  通过画板窗口上实现设置的区域上的按钮，通过捕捉鼠标位置，也可实现画笔颜色的切换，并且也可以实现画笔粗细以及画笔与橡皮之间的切换
